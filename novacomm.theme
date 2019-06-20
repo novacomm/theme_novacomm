@@ -35,7 +35,7 @@ function novacomm_form_system_theme_settings_alter(&$form, FormStateInterface $f
 }
 
 /**
- * Implements hook_preprocess() for settings form.
+ * Implements hook_preprocess() for fields.
  */
 function novacomm_preprocess_field (&$variables) {
   if ( $variables['field_name'] == 'field_url' AND $variables['element']['#bundle'] == 'projects') {
