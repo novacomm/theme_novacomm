@@ -391,3 +391,60 @@ header .header-container .header-inner nav .hor-nav li a.active
   color: #fff;
 }
 
+}
+/*********************************Team**************************/
+
+
+.about .page-banner {
+  background: url("../images/bkg-img-about.jpg") no-repeat scroll center top / cover;
+
+}
+
+.btn-go-bottom
+{
+  margin: 0 auto;
+    position: relative;
+    top: 300px;
+    width: 200px;
+    z-index: 100;
+}
+.btn-go-bottom .link-btn
+{
+  background: url(../images/go-down-arrow.html) no-repeat center 40px #fff;
+    background-color: ;
+    border-radius: 2px;
+    color: #000;
+    display: block;
+    font-size: 0.889em;
+    font-weight: 500;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    height: 73px;
+}
+.btn-go-bottom .link-btn:hover,
+.btn-go-bottom .link-btn:focus
+{
+  background-color:#252525 ;
+  color: #fff;
+}
+.down-arrow
+{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  background: url(../images/arrow-down.html) no-repeat;
+  width:36px ;
+  height:23px ;
+  z-index: 100;
+}
+.down-arrow span
+{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+
