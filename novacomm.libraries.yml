@@ -10,7 +10,7 @@ global-styling:
   css:
     component:
       css/style.css: {}
-      css/colors.css: {}
+      css/custom_colors.css: {}
 bootstrap:
   js:
     /libraries/popper/popper.min.js: {}

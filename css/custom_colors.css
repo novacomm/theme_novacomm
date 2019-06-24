@@ -22,11 +22,11 @@ body {
 }
 
 #navbar-top {
-    background-color: #055a8e;
+    background-color: #ffffff;
 }
 
-#navbar-main {
-    background-color: #1d84c3;
+#navbar-main, #header .bg-primary{
+    background-color: #ffffff  !important;
 }
 
 a,
@@ -62,7 +62,7 @@ a:active,
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #ffffff;
     border-color: #007bff;
 }
 
@@ -72,7 +72,7 @@ a:active,
 }
 
 .site-footer {
-    background: #292929;
+    background: #22215b;
 }
 
 .region-header,
