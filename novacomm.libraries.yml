@@ -2,6 +2,11 @@ global-styling:
   version: VERSION
   js:
     js/global.js: {}
+    js/jquery.function.js: {}
+    js/libraries/jquery.form.js: {}
+    js/libraries/jquery.hoverdir.min.js: {}
+    js/libraries/modernizr.custom.97074.js: {}
+
   css:
     component:
       css/style.css: {}

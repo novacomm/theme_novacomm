@@ -3,3 +3,91 @@
  * Subtheme specific CSS.
  */
 
+ /******************************Contact**************************/
+
+#block-contact
+{
+	/*position: relative;*/
+	width: 100%;
+	background: url(../images/contact-map.jpg) no-repeat center top  / cover;
+	height: 525px;
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+	z-index: 200;
+	top:-525px;
+	position:fixed;
+}
+#block-contact .contact-inner
+{
+	width:1180px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#block-contact h2
+{
+	color:#fff;
+	font-size: 2.667em;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	text-align: left;
+	border-bottom: 1px solid #fff;
+	margin: 0;
+}
+#block-contact .close-panel
+{
+	position: absolute;
+	top: -30px;
+	right: 20px;
+}
+#block-contact .close-panel:hover,
+#block-contact .close-panel:focus
+{
+	top: 0;
+}
+#block-contact .close-panel span
+{
+	position: absolute;
+	top:-9999px;
+	left: -9999px;
+}
+#block-contact .contact-container
+{
+	background-color:#10155e;
+	color: #fff;
+	opacity: 0.9;
+	width: 48.4%;
+	margin:0;
+	padding: 20px;
+	position: relative;
+	top: 50px;
+}
+#block-contact .contact-container h2,
+#block-contact .contact-container a
+{
+	color: #fff;
+}
+#block-contact .contact-container a.box-link-btn
+{
+	background-color: #fff;
+	color: #252525;
+	font-size: 0.889em;
+	font-weight: 500;
+	text-align: center;
+	padding: 8px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 260px;
+	border-radius: 2px;
+	margin-top: 50px;
+	display: block;
+}
+#block-contact .contact-container a.box-link-btn:hover,
+#block-contact .contact-container a.box-link-btn:focus
+{
+	background-color: #252525;
+	color: #fff;
+}
+
