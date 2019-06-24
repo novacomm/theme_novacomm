@@ -3,91 +3,391 @@
  * Subtheme specific CSS.
  */
 
+ html
+{
+  height: 100%;
+}
+
+body
+{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125em;
+  color: #252525;
+  width: 100%;
+    height: 100%;
+  padding: 0;
+  margin: 0;
+}
+a
+{
+  color: #e51b24;
+  text-decoration: underline;
+}
+a img
+{
+  border: none;
+}
+a:hover,
+a:focus
+{
+  color: #000;
+}
+.link-btn
+{
+  background-color: #e51b24;
+  color: #fff;
+  font-size: 0.889em;
+  font-weight: 500;
+  text-align: center;
+  padding: 8px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 260px;
+  border-radius: 2px;
+  margin-top: 30px;
+  display: block;
+}
+.link-btn:hover,
+.link-btn:focus
+{
+  background-color: #252525;
+  color: #fff;
+}
+.link-img-logo:hover
+{
+  opacity: 0.6;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+h1
+{
+  color:#22215b;
+  font-size: 2.667em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+h2
+{
+  font-size:1.333em ;
+  color: #252525;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 50px 0 20px;
+}
+h2 a
+{
+  color: #252525;
+  text-decoration: none;
+}
+h2 a:hover
+{
+  color: #e51b24;
+  text-decoration: underline;
+}
+h3
+{
+  font-size:2em ;
+   background: url(../images/grey-line.png) no-repeat scroll center top;
+  color: #848484;
+  font-weight: normal;
+  text-align: center;
+  margin: 20px 0 0px 0;
+  padding-top: 18px;
+}
+h4
+{
+  font-size:1.25em ;
+  color: #fff;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin: 20px 0 0px;
+}
+
+ /**************************************************************/
+/******************************Header**************************/
+/**************************************************************/
+
+
+#main,
+#join,
+#footer
+{
+  width: 100%;
+  margin: -2px 0 0;
+  padding: 0;
+}
+#main
+{
+  position: relative;
+  background-color: #fff;
+  z-index: 100;
+  margin-top: 90px;
+}
+.home #header,
+.internal-page #header
+{
+  height: 90px;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  z-index: 200;
+}
+
+.home header,
+.internal-page header
+{
+  height: auto;
+}
+header .header-container
+{
+  width: 100%;
+  height:90px;
+  /*opacity: 0.9;*/
+  position: relative;
+  overflow: hidden;
+  z-index: 1000;
+  clear: both;
+  background: url(../images/bkg-nav.png) repeat 0 0;
+}
+header .header-container .header-inner
+{
+  width:1180px;
+  margin: 0 auto;
+}
+header .header-container .header-inner a.logo
+{
+  cursor: pointer;
+    float: left;
+    margin: 20px 0 0;
+}
+header .header-container .header-inner a.logo span
+{
+  position: absolute;
+  top: -9999px;
+  left:-9999px;
+}
+header .header-container .header-inner .mob-nav-btn
+{
+    display: none;
+}
+header .header-container .header-inner nav .hor-nav
+{
+  float: right;
+  margin: 40px 0 0;
+}
+header .header-container .header-inner nav .hor-nav li
+{
+    display: inline-block;
+  font-size: 0.889em;
+    list-style: none;
+    margin: 0 0 0 20px;
+    padding: 0;
+    text-transform: uppercase;
+}
+header .header-container .header-inner nav .hor-nav li.contact
+{
+    background: url("../images/arrow-contact.png") no-repeat scroll right;
+    padding-right: 15px;
+}
+header .header-container .header-inner nav .hor-nav li.contact.open
+{
+    background: url("../images/arrow-contact-open.html") no-repeat scroll right;
+    padding-right: 15px;
+
+}
+header .header-container .header-inner nav .hor-nav li.home
+{
+  margin: 0;
+}
+header .header-container .header-inner nav .hor-nav li a
+{
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+header .header-container .header-inner nav .hor-nav li a:hover
+{
+  color: #e51b24;
+  border-bottom: 2px solid #e51b24;
+}
+header .header-container .header-inner nav .hor-nav li a.active
+{
+  color: #e51b24;
+  border-bottom: 2px solid #e51b24;
+}
+
+.block-views-blockbanner-banner .col-auto {   padding: 0;
+}
+
+#banner
+{
+  width: 100%;
+  height:850px;
+    position: relative;
+    z-index: 100;
+}
+.page-banner
+{
+    background: url("../images/bkg-img-about.jpg") no-repeat scroll center top / cover;
+    height: 100%;
+    position: relative;
+    top: -2px;
+}
+.page-banner .box-info
+{
+  background-color: #e51b24;
+  opacity: 0.9;
+  margin: 0 auto;
+  width: 600px;
+  color: #fff;
+  padding: 5px 10px;
+  top: 300px;
+  position: relative;
+  z-index: 100;
+}
+.page-banner .box-info p {
+  text-align: center;
+}
+.page-banner .box-info h1
+{
+  color: #fff;
+  font-weight: normal;
+  font-size: 3.333em;
+  padding: 0;
+  margin: 0;
+
+}
+.page-banner .overlay {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAQMAAAC3R49OAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAmf9A5tgAAAARSURBVAjXY1i1agEDEFCLBgA1MROJWXE8mAAAAABJRU5ErkJggg==');
+}
+.about #main
+{
+    background: none;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+}
+#main #slider
+{
+  position: relative;
+  z-index: 10;
+  padding-bottom: 60px;
+  background-color: #fff;
+  top: -2px;
+}
+#main #slider .slider-container
+{
+  /*margin-top: -90px;*/
+  position: relative;
+}
+#main #slider .slider-container img
+{
+  display: block;
+  width: 100%;
+}
+#main #slider .slider-info
+{
+  position: absolute;
+  top: 300px;
+  text-align: center;
+}
+
+
  /******************************Contact**************************/
 
 #block-contact
 {
-	/*position: relative;*/
-	width: 100%;
-	background: url(../images/contact-map.jpg) no-repeat center top  / cover;
-	height: 525px;
-	margin: 0;
-	padding: 0;
-	background-color: #eee;
-	z-index: 200;
-	top:-525px;
-	position:fixed;
+  /*position: relative;*/
+  width: 100%;
+  background: url(../images/contact-map.jpg) no-repeat center top  / cover;
+  height: 525px;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  z-index: 200;
+  top:-525px;
+  position:fixed;
 }
 #block-contact .contact-inner
 {
-	width:1180px;
-	margin: 0 auto;
-	position: relative;
+  width:1180px;
+  margin: 0 auto;
+  position: relative;
 }
 
 #block-contact h2
 {
-	color:#fff;
-	font-size: 2.667em;
-	font-weight: 700;
-	text-align: center;
-	text-transform: uppercase;
-	text-align: left;
-	border-bottom: 1px solid #fff;
-	margin: 0;
+  color:#fff;
+  font-size: 2.667em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+  margin: 0;
 }
 #block-contact .close-panel
 {
-	position: absolute;
-	top: -30px;
-	right: 20px;
+  position: absolute;
+  top: -30px;
+  right: 20px;
 }
 #block-contact .close-panel:hover,
 #block-contact .close-panel:focus
 {
-	top: 0;
+  top: 0;
 }
 #block-contact .close-panel span
 {
-	position: absolute;
-	top:-9999px;
-	left: -9999px;
+  position: absolute;
+  top:-9999px;
+  left: -9999px;
 }
 #block-contact .contact-container
 {
-	background-color:#10155e;
-	color: #fff;
-	opacity: 0.9;
-	width: 48.4%;
-	margin:0;
-	padding: 20px;
-	position: relative;
-	top: 50px;
+  background-color:#10155e;
+  color: #fff;
+  opacity: 0.9;
+  width: 48.4%;
+  margin:0;
+  padding: 20px;
+  position: relative;
+  top: 50px;
 }
 #block-contact .contact-container h2,
 #block-contact .contact-container a
 {
-	color: #fff;
+  color: #fff;
 }
 #block-contact .contact-container a.box-link-btn
 {
-	background-color: #fff;
-	color: #252525;
-	font-size: 0.889em;
-	font-weight: 500;
-	text-align: center;
-	padding: 8px 30px;
-	text-decoration: none;
-	text-transform: uppercase;
-	width: 260px;
-	border-radius: 2px;
-	margin-top: 50px;
-	display: block;
+  background-color: #fff;
+  color: #252525;
+  font-size: 0.889em;
+  font-weight: 500;
+  text-align: center;
+  padding: 8px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 260px;
+  border-radius: 2px;
+  margin-top: 50px;
+  display: block;
 }
 #block-contact .contact-container a.box-link-btn:hover,
 #block-contact .contact-container a.box-link-btn:focus
 {
-	background-color: #252525;
-	color: #fff;
+  background-color: #252525;
+  color: #fff;
 }
 
