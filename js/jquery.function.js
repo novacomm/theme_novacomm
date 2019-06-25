@@ -37,6 +37,21 @@
       return false;
     })
 
+
+
+    jQuery('a.smoove-lk').on('click',function(e){
+      e.preventDefault();
+
+      var target = this.hash;
+      jQuery.target = jQuery(target);
+      var offset = 0;
+      jQuery('html, body').stop().animate({
+        'scrollTop': jQuery(target).offset().top - offset
+      }, 1.5*jQuery(target).offset().top, 'swing', function () {
+        window.location.hash = target;
+      });
+    });
+
        /*jQuery('.change_view').bind('click',function(){
         if(!jQuery(this).hasClass('active')){
           jQuery('.change_view').toggleClass('active');
@@ -54,24 +69,6 @@
         }
         return false;
       })
-
-
-      function init_smoove(){
-        //inner menu smooth move
-        jQuery('a.smoove-lk').unbind('click');
-
-        jQuery('a.smoove-lk').bind('click',function(e){
-          e.preventDefault();
-
-          var target = this.hash;
-          jQuerytarget = jQuery(target);
-          var offset = 0;
-          jQuery('html, body').stop().animate({
-            'scrollTop': jQuery(target).offset().top - offset
-          }, 1.5*jQuery(target).offset().top, 'swing', function () {
-            window.location.hash = target;
-          });
-        });
       }
 
 
