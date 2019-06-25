@@ -10,13 +10,13 @@
   Drupal.behaviors.novacomm = {
     attach: function (context, settings) {
 
-      //CONTACT
-      jQuery('.nav-item a.contact').on('click', function(){
+      jQuery('.nav-item a.contact').parent().addClass('contact');
 
-        // if(jQuery('#block-contact').css('height') == '0px')
-        if(!jQuery('#block-contact').hasClass('open')) {
+      //CONTACT
+      jQuery('.navbar-nav').on('click', 'a.contact', function(){
+
+       if(!jQuery('#block-contact').hasClass('open')) {
           jQuery(this).parent().addClass('open');
-          //jQuery('#block-contact').addClass('open');
           jQuery('#block-contact').stop().animate({'top': 0}, 1000, 'swing');
           jQuery('#header').stop().animate({'top': 525}, 1000, 'swing');
           }
@@ -26,16 +26,16 @@
           jQuery('#header').stop().animate({'top': 0}, 1000, 'swing');
           }
 
+        jQuery('#block-contact').toggleClass('open');
         return false;
-        })
+      })
 
-     jQuery('#btn-contact-close').on('click', function(){
-      console.log('ok');
-        jQuery('#btn-contact').removeClass('open');
-        jQuery('#block-contact').stop().animate({'top': -525}, 1000, 'swing',function(){jQuery('#block-contact').removeClass('open')});
-          jQuery('#header').stop().animate({'top': 0}, 1000, 'swing');
-        return false;
-        })
+    jQuery('#block-contact').on('click', '#btn-contact-close', function(){
+      jQuery('.nav-item.contact').removeClass('open');
+      jQuery('#block-contact').stop().animate({'top': -525}, 1000, 'swing',function(){jQuery('#block-contact').removeClass('open')});
+      jQuery('#header').stop().animate({'top': 0}, 1000, 'swing');
+      return false;
+    })
 
        /*jQuery('.change_view').bind('click',function(){
         if(!jQuery(this).hasClass('active')){
