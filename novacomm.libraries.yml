@@ -1,10 +1,11 @@
 global-styling:
   version: VERSION
   js:
-    js/global.js: {}
     js/jquery.function.js: {}
+    js/jquery.init.js: {}
     js/libraries/jquery.form.js: {}
-    js/libraries/jquery.hoverdir.min.js: {}
+    js/libraries/jquery-ui.min.js: {}
+    js/libraries/jquery.hoverdir.js: {}
     js/libraries/modernizr.custom.97074.js: {}
 
   css:
