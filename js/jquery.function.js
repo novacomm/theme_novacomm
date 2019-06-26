@@ -52,6 +52,11 @@
       });
     });
 
+    jQuery('.header-inner').on('click', '.mob-nav-btn', function(e){
+       jQuery(this).parent().find('.menu-nav').slideToggle('');
+      return false;
+    });
+
        /*jQuery('.change_view').bind('click',function(){
         if(!jQuery(this).hasClass('active')){
           jQuery('.change_view').toggleClass('active');
@@ -74,10 +79,7 @@
 
       function init_mobile_menu(){
         jQuery('.mob-nav-btn').unbind('click');
-        jQuery('.mob-nav-btn').bind('click',function(){
-          jQuery('.menu-nav').slideToggle('');
-          return false;
-        });
+
       }*/
     }
   };

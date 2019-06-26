@@ -156,7 +156,7 @@ header
 {
   height: auto;
 }
-#header .header-container
+header .header-container
 {
   width: 100%;
   height:90px;
@@ -167,12 +167,12 @@ header
   clear: both;
   background: url(../images/bkg-nav.png) repeat 0 0;
 }
-#header .header-inner
+header .header-inner
 {
   width:1180px;
   margin: 0 auto;
 }
-#header .header-inner a.navbar-brand {
+header .header-inner a.navbar-brand {
   font-size: 0;
   cursor: pointer;
   float: left;
@@ -186,16 +186,16 @@ header
   float: right;
 }
 
-#header .navbar-expand-lg .navbar-collapse {
+header .navbar-expand-lg .navbar-collapse {
   display: block !important;
 }
 
-#header ul.nav.navbar-nav {
+header .header-container .header-inner nav .hor-nav {
   margin: 40px 0 0;
   display: block;
 }
 
-#header ul.nav.navbar-nav li {
+header .header-container .header-inner nav .hor-nav li {
   display: inline-block;
   font-size: 0.889em;
   list-style: none;
@@ -204,42 +204,50 @@ header
   text-transform: uppercase;
 }
 
-#header ul.nav.navbar-nav li.contact
-{
-    background: url("../images/arrow-contact.png") no-repeat scroll right;
-    padding-right: 15px;
-}
-#header ul.nav.navbar-nav li.contact.open
-{
-    background: url("../images/arrow-contact-open.html") no-repeat scroll right;
-    padding-right: 15px;
-
+header .header-container .header-inner nav .hor-nav li.contact {
+  background: url("../images/arrow-contact.png") no-repeat scroll right;
+  padding-right: 15px;
 }
 
-#header .nav-link {
+header .header-container .header-inner nav .hor-nav li.contact.open{
+  background: url("../images/arrow-contact-open.html") no-repeat scroll right;
+  padding-right: 15px;
+}
+
+header .nav-link {
   padding: 0;
 }
 
-#header ul.nav.navbar-nav li.home
+header .header-container .header-inner nav .hor-nav li.home
 {
   margin: 0;
 }
-#header ul.nav.navbar-nav li a
+header .header-container .header-inner nav .hor-nav li a
 {
   text-decoration: none;
   color: #000;
   font-weight: 500;
 }
-#header ul.nav.navbar-nav li a:hover
+header .header-container .header-inner nav .hor-nav li a:hover
 {
   color: #e51b24;
   border-bottom: 2px solid #e51b24;
 }
 
-#header ul.nav.navbar-nav li a.active
+header .header-container .header-inner nav .hor-nav li a.active
 {
   color: #e51b24;
   border-bottom: 2px solid #e51b24;
+}
+
+header .header-container .header-inner .mob-nav-btn {
+  display: none;
+}
+
+.icons a span, .mob-nav-btn span {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
 }
 
 .block-views-blockbanner-banner .col-auto {   padding: 0;
@@ -468,6 +476,479 @@ header
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+@media screen and (max-width: 1180px)
+{
+
+  header .header-container .header-inner
+  {
+      margin: 0 auto;
+      width: auto;
+  }
+  header .header-inner
+  {
+    width:auto;
+    margin: 0;
+    padding: 0 20px;
+  }
+  #contact .contact-inner
+  {
+      margin: 0;
+      width: auto;
+    padding: 0 20px;
+  }
+  .about #banner
+  {
+      height: 650px;
+  }
+  .internal-page #main #page-content .content-inner,
+  #main #page-content .content-inner,
+  .internal-page #main #detail-project .content-inner
+  {
+    width:auto;
+    margin: 0;
+    padding: 0 20px;
+  }
+  .internal-page #main #intro-project .content-inner
+  {
+    width:auto;
+    margin: 0;
+    padding: 50px 20px 0;
+  }
+  .internal-page #main #page-content  h1
+  {
+    padding-top: 40px;
+  }
+  .internal-page #main #page-content
+  {
+      margin-top: -2px;
+    }
+    .internal-page #main #intro-project .col,
+    .internal-page #main #detail-project .project-focus .box
+  {
+    width: 47%;
+  }
+  .internal-page #main #intro-project .col img,
+  .internal-page #main #detail-project .project-focus .box img
+  {
+    width: 100%;
+  }
+  .internal-page #main #page-content .list-container a.col
+  {
+    display: block;
+      margin-right: 0;
+      margin-bottom: 4%;
+      float: none;
+      width: 100%;
+      position: relative;
+      text-decoration: none;
+      color: #000;
+      clear: both;
+  }
+  footer #footer-inner
+  {
+    width:auto;
+    margin: 0 ;
+    padding: 20px 20px 50px;
+    color: #fff;
+  }
+  .page-banner .box-info,
+  .btn-go-bottom
+  {
+      top: 200px;
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 960px)
+{
+
+
+  .internal-page #main #page-content .list-container .col .items .item-front img
+  {
+    width: 30%;
+    float: left;
+    border-right: 3px solid #252525;
+  }
+  .internal-page #main #detail-project .project-focus
+  {
+    height: auto;
+  }
+  .internal-page #main #intro-project .col.last
+  {
+      padding-left: 30px;
+  }
+  .internal-page #main #intro-project .col, .internal-page #main #detail-project .col
+  {
+      vertical-align: middle;
+  }
+  .internal-page #main .team-container ul li
+  {
+    width: 24.5%;
+  }
+  .internal-page #main .team-container ul li .pic-member .info-member span
+  {
+      font-size: 0.7em;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 800px)
+{
+
+  #contact .contact-container
+  {
+      top: 50px;
+      width: 80%;
+  }
+  #join .join-inner
+  {
+    width:auto;
+  }
+  #join .join-container
+  {
+    width: 80%;
+  }
+  header .header-inner a.logo img
+  {
+      margin-top: 14px;
+      width: 150px;
+  }
+  h3 {
+    margin: 20px 0 30px 0;
+  }
+  #main #page-content .grid-container .grid-1-of-2 h2 {
+    margin: 20px 0 15px 0;
+  }
+  #main #page-content .grid-container .grid-1-of-2 .link-btn {
+    margin: 45px auto;
+  }
+  #main #page-content .grid-container .grid-1-of-2
+  {
+      margin-right: 0;
+      width: auto;
+  }
+  #main #page-content .grid-container .col
+  {
+      float: none;
+  }
+  #main #page-content .height-fix
+  {
+    min-height: inherit;
+  }
+  #main #slider .slider-container
+  {
+      margin-top: -2px;
+  }
+  .novacomm-logo {
+      display: none;
+  }
+  .dotted-left, .dotted-right {
+      display: none;
+  }
+
+  .internal-page #main #detail-project .job-box .link-btn
+  {
+      width: 260px;
+      margin: 20px 0 20px 160px;
+  }
+  .internal-page #main #detail-project .job-box .col
+  {
+      box-sizing: normal;
+      display:block;
+      vertical-align: inherit;
+  }
+  .internal-page #main #form-container .right-info input.text-field
+  {
+    width: 300px;
+  }
+  .internal-page #main #form-container .right-info textarea
+  {
+    width: 290px;
+  }
+  .internal-page #main .team-container ul li .pic-member .info-member
+  {
+      height: 40px;
+  }
+  .internal-page #main .team-container ul li .pic-member .info-member span.member-name
+  {
+    padding-bottom: 10px;
+  }
+  .internal-page #main #page-content .grid-container a.col
+  {
+      display: inline-block;
+      float: none;
+      margin-bottom: 2%;
+      margin-right: 1.3%;
+      position: relative;
+      width: 49%;
+  }
+  #footer #footer-inner .grid-container .grid-1-of-3 {
+      margin-right: 3.2%;
+      width: 100%;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 640px)
+{
+  h1,
+  #contact h2
+  {
+    font-size: 2em;
+  }
+  header .header-inner nav .hor-nav.menu-nav {
+  display: none;
+  }
+
+  #block-novacomm-main-menu {
+    float: none;
+  }
+  header .header-container .header-inner .mob-nav-btn
+  {
+      cursor: pointer;
+      display: block;
+      height: 53px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 51px;
+  }
+  header .header-container
+  {
+      overflow: inherit;
+      position: relative;
+      width: 100%;
+  }
+  header .header-container .header-inner nav .hor-nav {
+      background-color: #fff;
+      float: left;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      position: absolute;
+      top: 88px;
+  }
+  header .header-container .header-inner nav .hor-nav li
+  {
+      display: block;
+      width: 100%;
+      margin: 0;
+  }
+  header .header-container .header-inner nav .hor-nav li a
+  {
+      color: #000;
+      font-weight: 500;
+      text-decoration: none;
+         padding: 7px 0 7px 10px;
+      display: block;
+  }
+  header .header-container .header-inner nav .hor-nav li a:hover
+  {
+      border-bottom: none;
+      background-color:#e51b24;
+      color:  #fff;
+  }
+  header .header-container .header-inner nav .hor-nav li a.active
+  {
+      border-bottom: none;
+      background-color:#e51b24;
+      color:  #fff;
+  }
+  header .header-container .header-inner nav .hor-nav li.contact
+  {
+      padding-right: 0;
+  }
+  header .header-inner
+  {
+      padding: 0;
+  }
+  header .header-container .header-inner a.logo
+  {
+      margin: 20px 0 0 10px;
+  }
+  .link-btn,
+  #contact .contact-container a.box-link-btn
+  {
+    padding: 8px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: auto;
+  }
+  header .header-container .header-inner nav .hor-nav li.contact
+  {
+      background:none;
+  }
+  #banner {
+      height: 650px;
+      width: 100%;
+  }
+  .page-banner .box-info
+  {
+    width: auto;
+  }
+  .page-banner .box-info h1
+  {
+    font-size: 2.5em;
+  }
+  .about #banner
+  {
+      height: 350px;
+  }
+  .about .page-banner .box-info
+  {
+    width: 100%;
+  }
+  .about .page-banner .box-info h1
+  {
+    font-size: 2.2em;
+  }
+  .about .page-banner .box-info,
+  .btn-go-bottom
+  {
+    top: 0;
+  }
+  .about #main
+  {
+    top: -2px;
+  }
+  #main #page-content .content-inner
+  {
+      margin: 50px 0 0;
+  }
+  .internal-page #main #intro-project
+  {
+      padding-bottom: 50px;
+  }
+  .internal-page #main #intro-project .col
+  {
+      width: 100%;
+      display: inherit;
+  }
+  .internal-page #main #intro-project .col.last
+  {
+      padding-left: 0;
+  }
+  .internal-page #main #detail-project .project-focus .box
+  {
+     width: 100%;
+  }
+  .internal-page #main #detail-project .project-focus
+  {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 50px;
+  }
+  .internal-page #main #detail-project .project-focus h2
+  {
+    margin: 0;
+    padding: 20px 0 0;
+  }
+  .internal-page #main #detail-project .project-focus .box {
+      display: block;
+      vertical-align: top;
+  }
+  .internal-page #main #detail-project .project-focus .box-right
+  {
+      padding-left: 0;
+      text-align: center;
+  }
+  .internal-page #main #detail-project .project-focus .box-left
+  {
+      padding-right: 0;
+      text-align: center;
+  }
+  .internal-page #main #intro-project h1
+  {
+      margin: 20px 0 0;
+  }
+  .internal-page #main #form-container .left-info
+  {
+      box-sizing:normal;
+      float: none;
+      padding-right: 0;
+      text-transform: uppercase;
+      width:100%;
+  }
+  .internal-page #main #form-container .right-info
+  {
+      box-sizing:normal;
+      float: none;
+  }
+  .internal-page #main #form-container .right-info input.text-field
+  {
+      width: 100%;
+  }
+  .internal-page #main .team-container ul li .pic-member .info-member
+  {
+    height: 45px;
+  }
+  .internal-page #main .team-container ul li .pic-member .info-member span
+  {
+      padding: 10px 15px 0;
+  }
+  .internal-page #main .team-container ul li
+  {
+    width: 32.5%;
+  }
+  .internal-page #main .team-container ul li .pic-member .info-member span
+  {
+      font-size: 0.7em;
+  }
+  .internal-page #main #page-content .grid-container .col .items .item-back h2
+  {
+      font-size: 1.4em;
+      margin: 10% 0 0;
+  }
+  .page-banner .box-info p
+  {
+      display: none;
+  }
+  #footer-inner h2
+  {
+      margin: 20px 0 10px;
+  }
+  footer #footer-inner .grid-container .grid-1-of-2
+  {
+      margin-right: 0;
+      width: auto;
+  }
+  footer #footer-inner .grid-container .col
+  {
+      float: none;
+      width: 100%
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 480px)
+{
+
+  .internal-page #main .team-container ul li
+  {
+    width: 48.5%;
+  }
+  .about .page-banner .box-info
+  {
+      width: 90%;
+  }
+  .about .page-banner .box-info h1
+  {
+      font-size: 1.8em;
+  }
+
 }
 
 
