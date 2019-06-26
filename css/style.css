@@ -425,6 +425,12 @@ header .header-container .header-inner .mob-nav-btn {
 /*********************************************************************/
 /******************************Content********************************/
 /*********************************************************************/
+.row {
+  display: block;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 
 .clearfix:after {
     clear: both;
@@ -1328,16 +1334,6 @@ footer #footer-inner .grid-container
   width: 100%;
 }
 
-/*footer #footer-inner .grid-container .grid-1-of-2
-{
-    margin-right: 3.2%;
-    width: 48.4%;
-}
-footer #footer-inner .grid-container .last
-{
-    margin-right: 0;
-}*/
-
 footer #footer-inner .grid-container .grid-1-of-3
 {
     margin-right: 3.2%;
@@ -1441,7 +1437,8 @@ footer #footer-inner .grid-container .grid-1-of-3 ul{
   padding: 0;
 
 }
-footer #footer-inner .li-footer a, footer #footer-inner .li-footer-last a{
+footer #footer-inner #block-novacomm-footer li a,
+footer #footer-inner #block-novacomm-footer li:last-child a {
   display: inline;
   margin-right: 7px;
   font-size:1.000em;
@@ -1449,13 +1446,14 @@ footer #footer-inner .li-footer a, footer #footer-inner .li-footer-last a{
   color: #fff;
 
 }
-footer #footer-inner .li-footer {
+footer #footer-inner #block-novacomm-footer li {
   list-style: none;
-  display: inline;
-    border-right: 1px solid grey;
+  display: inline-block;
+  border-right: 1px solid grey;
 
 }
-footer #footer-inner .li-footer-last{
+
+footer #footer-inner #block-novacomm-footer li:last-child {
   list-style: none;
   display: inline;
   border-right: none;

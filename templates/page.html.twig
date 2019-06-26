@@ -163,24 +163,33 @@
         </aside>
       </div>
     {% endif %}
-    <footer class="site-footer">
-      {% block footer %}
-        <div class="{{ container }}">
-          {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-            <div class="site-footer__top clearfix">
-              {{ page.footer_first }}
-              {{ page.footer_second }}
-              {{ page.footer_third }}
-              {{ page.footer_fourth }}
-            </div>
-          {% endif %}
-          {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
-              {{ page.footer_fifth }}
-            </div>
-          {% endif %}
-        </div>
-      {% endblock %}
-    </footer>
+      <section id="footer">
+        <footer>
+        {% block footer %}
+          <div id="footer-inner" class="clearfix">
+            {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+              <div class="grid-container">
+                <div class="col grid-1-of-3">
+                  {{ page.footer_first }}
+                </div>
+                <div class="col grid-1-of-3">
+                  {{ page.footer_second }}
+                </div>
+                <div class="col grid-1-of-3">
+                  {{ page.footer_third }}
+                </div>
+                {{ page.footer_fourth }}
+              </div>
+          </div>
+            {% endif %}
+            {% if page.footer_fifth %}
+              <div class="site-footer__bottom">
+                {{ page.footer_fifth }}
+              </div>
+            {% endif %}
+          </div>
+        {% endblock %}
+      </footer>
+    </section>
   </div>
 </div>
