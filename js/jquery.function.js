@@ -167,7 +167,6 @@ Drupal.behaviors.novacomm.init_page = function() {
         jQuery('.change_view').toggleClass('active');
 
         if(jQuery('#project-container').hasClass('grid-container')){
-          console.log('ok');
           jQuery('.items ').each( function() { jQuery(this).hoverdir('destroy'); });
           jQuery('#project-container').removeClass('grid-container');
           jQuery('#project-container').addClass('list-container');
