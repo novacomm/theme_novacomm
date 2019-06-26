@@ -35,6 +35,16 @@ function novacomm_form_system_theme_settings_alter(&$form, FormStateInterface $f
 }
 
 /**
+ * Implements hook_preprocess().
+ */
+function novacomm_preprocess_html(&$variables) {
+  $path_class = !$variables['root_path'] ? 'home' : 'internal-page';
+  if (isset($path_class)) {
+    $variables['attributes']['class'][] = $path_class;
+  }
+}
+
+/**
  * Implements hook_preprocess() for fields.
  */
 function novacomm_preprocess_field (&$variables) {
@@ -42,3 +52,4 @@ function novacomm_preprocess_field (&$variables) {
     $variables['items'][0]['content']['#title'] = t('Go to the website');
   }
 }
+

@@ -179,9 +179,7 @@ header .header-inner a.navbar-brand {
   margin: 20px 0 0;
 }
 
-/*{
-    display: none;
-}*/
+
 #block-novacomm-main-menu {
   float: right;
 }
@@ -422,7 +420,45 @@ header .header-container .header-inner .mob-nav-btn {
   color: #fff;
 }
 
+/*********************************************************************/
+/******************************Content********************************/
+/*********************************************************************/
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
 }
+.home #main #page-content
+{
+  position: relative;
+  background-color: #fff;
+  z-index: 100;
+  /*padding-bottom: 100px;*/
+  top: -2px;
+}
+.internal-page #main #page-content
+{
+  position: relative;
+  background-color: #f4f2f2;
+  z-index: 10;
+  padding-bottom: 100px;
+  top: -2px;
+}
+
+.home .page-banner {
+  background: url("../images/img-slider_bkgd.jpg") no-repeat scroll center top / cover;
+}
+.home #main h2 {
+
+  margin-top: 30px;
+}
+ p.logo_hp {
+  text-align:center;
+  margin: 10px 0px 0px;
+}
+
+
 /*********************************Team**************************/
 
 
