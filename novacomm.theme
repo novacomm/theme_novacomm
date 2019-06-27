@@ -52,4 +52,3 @@ function novacomm_preprocess_field (&$variables) {
     $variables['items'][0]['content']['#title'] = t('Go to the website');
   }
 }
-
