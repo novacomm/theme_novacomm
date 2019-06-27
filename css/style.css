@@ -105,6 +105,8 @@ h4
   margin: 20px 0 0px;
 }
 
+.node--type-page h1.title {display:none;}
+
 .border-bottom-white
 {
   border-bottom: 1px solid #fff;
@@ -115,10 +117,13 @@ h4
   margin-top: 30px;
   padding-top: 10px;
 }
-ul li
-{
+ul li {
   list-style-image: url(../images/bullet-circle.png);
   line-height: 1.6em;
+}
+
+#intro-project .content-inner .col {
+  width: auto;
 }
 
  /******************************Contact**************************/

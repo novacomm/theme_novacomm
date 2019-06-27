@@ -143,7 +143,11 @@
       {% block content %}
         <div id="main">
           {{ page.breadcrumb }}
-          <div id="page-content">
+          {% set page_class = 'page-content' %}
+          {% if node.nid.value == 25 %}
+            {% set page_class = 'intro-project' %}
+          {% endif %}
+          <div id="{{ page_class }}">
             <div class="content-inner clearfix">
               <div class="row row-offcanvas row-offcanvas-left clearfix">
                 <a id="main-content" tabindex="-1"></a>
@@ -193,3 +197,4 @@
     </section>
   </div>
 </div>
+
