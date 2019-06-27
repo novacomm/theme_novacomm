@@ -1,21 +1,5 @@
 /**
- * jQuery.Hoverdir
- *
- * Modified version of https://github.com/codrops/DirectionAwareHoverEffect
- *
- * Modifications:
- * - Removed CSS3 transitions and Modernizr requirements.
- * - Applied CSS classes for improved flexibility via CSS.
- *
- * @copyright  2015 WebMan - Oliver Juhas, www.webmandesign.eu
- *
- * @link  https://github.com/webmandesign/jquery.hoverdir
- *
- * @version  1.1.2
- */
-
-/**
- * jquery.hoverdir.js v1.1.2
+ * jquery.hoverdir.js v1.1.0
  * http://www.codrops.com
  *
  * Licensed under the MIT license.
@@ -24,235 +8,220 @@
  * Copyright 2012, Codrops
  * http://www.codrops.com
  */
-
-( function( factory ) {
-
-
+;( function( $, window, undefined ) {
 
 	'use strict';
 
-
-
-	if ( typeof define === 'function' && define.amd ) {
-		define( ['jquery'], factory );
-	} else if ( typeof exports !== 'undefined' ) {
-		module.exports = factory( require( 'jquery' ) );
-	} else {
-		factory( jQuery );
-	}
-
-
-
-} )( function( $ ) {
-
-
-
-	'use strict';
-
-
-
-	function Hoverdir( element, options ) {
+	$.HoverDir = function( options, element ) {
 
 		this.$el = $( element );
+		this._init( options );
 
-		// Set options
+	};
 
-		this.options = $.extend( true, {}, this.defaults, options );
+	// the options
+	$.HoverDir.defaults = {
+		speed : 300,
+		easing : 'ease',
+		itemEl : 'div.item-back',
+		hoverDelay : 0,
+		inverse : false
+	};
 
-		// All classes that plugin generates
+	$.HoverDir.prototype = {
 
-		this.allClasses = {
-				from : this.options.fromPrefix + 'top ' + this.options.fromPrefix + 'right ' + this.options.fromPrefix + 'bottom ' + this.options.fromPrefix + 'left',
-				to   : this.options.toPrefix + 'top ' + this.options.toPrefix + 'right ' + this.options.toPrefix + 'bottom ' + this.options.toPrefix + 'left'
-			};
+		_init : function( options ) {
 
-		// Load the events
+			// options
+			this.options = $.extend( true, {}, $.HoverDir.defaults, options );
+			// transition properties
+			this.transitionProp = 'all ' + this.options.speed + 'ms ' + this.options.easing;
+			// support for CSS transitions
+			this.support = Modernizr.csstransitions;
+			// load the events
+			this._loadEvents();
 
-		this._loadEvents();
-
-	} // /Hoverdir
-
-
-
-	Hoverdir.prototype = {
-
-		defaults : {
-			fromPrefix : 'out-',
-			toPrefix   : 'in-'
 		},
-
-		constructor : Hoverdir,
-
-
-
+		destroy: function() {
+		// Remove elements, unregister listerners, etc
+			this.$el.off('mouseenter.hoverdir, mouseleave.hoverdir');
+		// Remove data
+			this.$el.removeData();
+		},
 		_loadEvents : function() {
 
-			this.$el.on( 'mouseenter.hoverdir mouseleave.hoverdir', $.proxy( function( event ) {
+			var self = this;
 
-				var fromPrefix = this.options.fromPrefix,
-				    toPrefix   = this.options.toPrefix,
-				    direction  = this._getDir( { x : event.pageX, y : event.pageY } ),
-				    CSSclass   = this._getClass( direction );
+			this.$el.on( 'mouseenter.hoverdir, mouseleave.hoverdir', function( event ) {
 
-				if ( event.type === 'mouseenter' ) {
+				var $el = $( this ),
+					$hoverElem = $el.find( self.options.itemEl ),
+					direction = self._getDir( $el, { x : event.pageX, y : event.pageY } ),
+					styleCSS = self._getStyle( direction );
 
-					this.$el
-						.removeClass( this.allClasses.from )
-						.addClass( toPrefix + CSSclass )
-						.siblings()
-							.removeClass( this.allClasses.to );
+				if( event.type === 'mouseenter' ) {
 
-				} else {
+					$hoverElem.hide().css( styleCSS.from );
+					clearTimeout( self.tmhover );
 
-					this.$el
-						.removeClass( this.allClasses.to )
-						.addClass( fromPrefix + CSSclass )
-						.siblings()
-							.removeClass( this.allClasses.from );
+					self.tmhover = setTimeout( function() {
+
+						$hoverElem.show( 0, function() {
+
+							var $el = $( this );
+							if( self.support ) {
+								$el.css( 'transition', self.transitionProp );
+							}
+							self._applyAnimation( $el, styleCSS.to, self.options.speed );
+
+						} );
+
+
+					}, self.options.hoverDelay );
+
+				}
+				else {
+
+					if( self.support ) {
+						$hoverElem.css( 'transition', self.transitionProp );
+					}
+					clearTimeout( self.tmhover );
+					self._applyAnimation( $hoverElem, styleCSS.from, self.options.speed );
 
 				}
 
-			}, this ) );
+			} );
 
 		},
+		// credits : http://stackoverflow.com/a/3647634
+		_getDir : function( $el, coordinates ) {
 
+			// the width and height of the current div
+			var w = $el.width(),
+				h = $el.height(),
 
+				// calculate the x and y to get an angle to the center of the div from that x and y.
+				// gets the x value relative to the center of the DIV and "normalize" it
+				x = ( coordinates.x - $el.offset().left - ( w/2 )) * ( w > h ? ( h/w ) : 1 ),
+				y = ( coordinates.y - $el.offset().top  - ( h/2 )) * ( h > w ? ( w/h ) : 1 ),
 
-		/**
-		 * Get the direction when the event is triggered.
-		 * Credits : http://stackoverflow.com/a/3647634
-		 *
-		 * @param  {Object} coordinates
-		 *
-		 * @return  {Interger}
-		 */
-		_getDir : function( coordinates ) {
-
-			// The width and height of the current div
-
-			var w = this.$el.width(),
-			    h = this.$el.height(),
-
-			    // Calculate the x and y to get an angle to the center of the div from that x and y.
-			    // Gets the x value relative to the center of the DIV and "normalize" it
-
-			    x = ( coordinates.x - this.$el.offset().left - ( w / 2 ) ) * ( w > h ? ( h / w ) : 1 ),
-			    y = ( coordinates.y - this.$el.offset().top  - ( h / 2 ) ) * ( h > w ? ( w / h ) : 1 ),
-
-			    // The angle and the direction from where the mouse came in/went out clockwise (TRBL=0123);
-			    // first calculate the angle of the point,
-			    // add 180 deg to get rid of the negative values
-			    // divide by 90 to get the quadrant
-			    // add 3 and do a modulo by 4 to shift the quadrants to a proper clockwise TRBL (top/right/bottom/left).
-
-			    direction = Math.round( ( ( ( Math.atan2( y, x ) * ( 180 / Math.PI ) ) + 180 ) / 90 ) + 3 ) % 4;
+				// the angle and the direction from where the mouse came in/went out clockwise (TRBL=0123);
+				// first calculate the angle of the point,
+				// add 180 deg to get rid of the negative values
+				// divide by 90 to get the quadrant
+				// add 3 and do a modulo by 4  to shift the quadrants to a proper clockwise TRBL (top/right/bottom/left) **/
+				direction = Math.round( ( ( ( Math.atan2(y, x) * (180 / Math.PI) ) + 180 ) / 90 ) + 3 ) % 4;
 
 			return direction;
 
 		},
+		_getStyle : function( direction ) {
 
-
-
-		/**
-		 * Return a class based on cursor direction
-		 */
-		_getClass : function( direction ) {
-
-			var CSSclass;
+			var fromStyle, toStyle,
+				slideFromTop = { left : '0px', top : '-100%' },
+				slideFromBottom = { left : '0px', top : '100%' },
+				slideFromLeft = { left : '-100%', top : '0px' },
+				slideFromRight = { left : '100%', top : '0px' },
+				slideTop = { top : '0px' },
+				slideLeft = { left : '0px' };
 
 			switch( direction ) {
 				case 0:
-					CSSclass = 'top';
+					// from top
+					fromStyle = !this.options.inverse ? slideFromTop : slideFromBottom;
+					toStyle = slideTop;
 					break;
 				case 1:
-					CSSclass = 'right';
+					// from right
+					fromStyle = !this.options.inverse ? slideFromRight : slideFromLeft;
+					toStyle = slideLeft;
 					break;
 				case 2:
-					CSSclass = 'bottom';
+					// from bottom
+					fromStyle = !this.options.inverse ? slideFromBottom : slideFromTop;
+					toStyle = slideTop;
 					break;
 				case 3:
-					CSSclass = 'left';
+					// from left
+					fromStyle = !this.options.inverse ? slideFromLeft : slideFromRight;
+					toStyle = slideLeft;
 					break;
-			}
+			};
 
-			return CSSclass;
+			return { from : fromStyle, to : toStyle };
+
+		},
+		// apply a transition or fallback to jquery animate based on Modernizr.csstransitions support
+		_applyAnimation : function( el, styleCSS, speed ) {
+
+			$.fn.applyStyle = this.support ? $.fn.css : $.fn.animate;
+			el.stop().applyStyle( styleCSS, $.extend( true, [], { duration : speed + 'ms' } ) );
 
 		},
 
+	};
 
+	var logError = function( message ) {
 
-		/**
-		 * Setting options for plugin binding
-		 */
-		setOptions : function (options) {
+		if ( window.console ) {
 
-			this.options = $.extend( true, {}, this.defaults, this.options, options );
-
-		},
-
-
-
-		/**
-		 * Unbinds the plugin
-		 */
-		destroy : function () {
-
-			this.$el.off( 'mouseenter.hoverdir mouseleave.hoverdir' );
-			this.$el.data( 'hoverdir', null );
-
-		},
-
-
-
-		/**
-		 * Bind the plugin
-		 */
-		rebuild : function (options) {
-
-			if ( typeof options === 'object' ) {
-				this.setOptions( options );
-			}
-
-			this._loadEvents();
+			window.console.error( message );
 
 		}
 
 	};
 
+	$.fn.hoverdir = function( options ) {
 
+		var instance = $.data( this, 'hoverdir' );
 
-	$.fn.hoverdir = function( option, parameter ) {
+		if ( typeof options === 'string' ) {
 
-		return this.each( function() {
+			var args = Array.prototype.slice.call( arguments, 1 );
 
-			var data    = $( this ).data( 'hoverdir' ),
-			    options = typeof option === 'object' && option;
+			this.each(function() {
 
-			// Initialize hoverdir.
+				if ( !instance ) {
 
-			if ( ! data ) {
-				data = new Hoverdir( this, options );
-				$( this ).data( 'hoverdir', data );
-			}
+					logError( "cannot call methods on hoverdir prior to initialization; " +
+					"attempted to call method '" + options + "'" );
+					return;
 
-			// Call hoverdir method.
-
-			if ( typeof option === 'string' ) {
-				data[ option ]( parameter );
-
-				if ( option === 'destroy' ) {
-					$( this ).data( 'hoverdir', false );
 				}
-			}
 
-		} );
+				if ( !$.isFunction( instance[options] ) || options.charAt(0) === "_" ) {
+
+					logError( "no such method '" + options + "' for hoverdir instance" );
+					return;
+
+				}
+
+				instance[ options ].apply( instance, args );
+
+			});
+
+		}
+		else {
+
+			this.each(function() {
+
+				if ( instance ) {
+
+					instance._init();
+
+				}
+				else {
+
+					instance = $.data( this, 'hoverdir', new $.HoverDir( options, this ) );
+
+				}
+
+			});
+
+		}
+
+		return instance;
 
 	};
 
-
-
-	$.fn.hoverdir.Constructor = Hoverdir;
-
-
-
-} );
+} )( jQuery, window );

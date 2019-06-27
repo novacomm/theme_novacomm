@@ -38,7 +38,8 @@ Drupal.behaviors.novacomm.init_page = function() {
     }
   };
 
-  jQuery('.items ').each( function() { jQuery(this).hoverdir({speed : 450}); });
+  jQuery('.items ').each( function() { jQuery(this).hoverdir({
+    speed : 450})});
 
   jQuery('#application_form').ajaxForm(options);
 
