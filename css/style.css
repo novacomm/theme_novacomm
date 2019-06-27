@@ -909,6 +909,10 @@ header .header-container .header-inner .mob-nav-btn {
   vertical-align: baseline;
   color: #FFF;
 }
+
+.internal-page #main #page-content .col .items .hidden {
+  display: block;
+}
 /*.internal-page #main #page-content .grid-container .col:hover .items:hover .hidden
 {
   display: block;
