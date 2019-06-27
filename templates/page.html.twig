@@ -143,18 +143,21 @@
       {% block content %}
         <div id="main">
           {{ page.breadcrumb }}
-          {% set page_class = 'page-content' %}
-          {% if node.nid.value == 25 %}
-            {% set page_class = 'intro-project' %}
-          {% endif %}
           <div id="{{ page_class }}">
+          {% if content_type != 'projects' %}
+            {% set page_class = 'page-content' %}
+            {% set content_type = node.gettype %}
+            {% if node.nid.value == 25 %}
+              {% set page_class = 'intro-project' %}
+            {% endif %}
             <div class="content-inner clearfix">
-              <div class="row row-offcanvas row-offcanvas-left clearfix">
+          {% endif %}
                 <a id="main-content" tabindex="-1"></a>
                   {{ page.content }}
-              </div>
+            {% if content_type != 'projects' %}
             </div>
           </div>
+          {% endif %}
         </div>
       {% endblock %}
     </div>

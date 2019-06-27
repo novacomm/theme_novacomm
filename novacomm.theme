@@ -50,6 +50,7 @@ function novacomm_preprocess_html(&$variables) {
 function novacomm_preprocess_field (&$variables) {
   if ( $variables['field_name'] == 'field_url' AND $variables['element']['#bundle'] == 'projects') {
     $variables['items'][0]['content']['#title'] = t('Go to the website');
+    $variables['items'][0]['content']['#attributes']['class'][] = 'link-btn';
   }
 }
 
