@@ -1,0 +1,23 @@
+{
+    "name": "abelass/theme_novacomm",
+    "description": "Theme novacomm",
+    "type": "drupal-theme",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Rainer Müller",
+            "email": "rainer@websimple.be"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/bootstrap_barrio": "^4.22",
+        "drupal/bootstrap_library": "^1.11",
+        "drupal/context": "^4.0@beta",
+        "drupal/ds": "^3.3",
+        "drupal/field_group": "^1.0",
+        "drupal/gdpr": "^2.0@alpha",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/pathauto": "^1.4",
+    }
+}
