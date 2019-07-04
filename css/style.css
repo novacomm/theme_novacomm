@@ -1494,28 +1494,28 @@ footer #footer-inner #block-novacomm-footer li:last-child {
   }
   #contact .contact-inner
   {
-      margin: 0;
-      width: auto;
+    margin: 0;
+    width: auto;
     padding: 0 20px;
   }
-  .about #banner
-  {
-      height: 650px;
+  .about #banner {
+    height: 650px;
   }
+
   .internal-page #main #page-content .content-inner,
   #main #page-content .content-inner,
-  .internal-page #main #detail-project .content-inner
-  {
+  .internal-page #main #detail-project .content-inner{
     width:auto;
     margin: 0;
     padding: 0 20px;
   }
-  .internal-page #main #intro-project .content-inner
-  {
+
+  .internal-page #main #intro-project .content-inner {
     width:auto;
     margin: 0;
     padding: 50px 20px 0;
   }
+
   .internal-page #main #page-content  h1
   {
     padding-top: 40px;
