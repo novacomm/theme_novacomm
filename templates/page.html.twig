@@ -143,6 +143,13 @@
       {% block content %}
         <div id="main">
           {{ page.breadcrumb }}
+        {% set page_class = 'page-content' %}
+        {% if content_type != 'projects' %}
+            {% set content_type = node.gettype %}
+            {% if node.nid.value == 25 %}
+              {% set page_class = 'intro-project' %}
+            {% endif %}
+        {% endif %}
           <div id="{{ page_class }}">
           {% if content_type != 'projects' %}
             {% set page_class = 'page-content' %}
