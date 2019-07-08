@@ -15,7 +15,7 @@
         "drupal/bootstrap_library": "^1.11",
         "drupal/context": "^4.0@beta",
         "drupal/ds": "^3.3",
-        "drupal/field_group": "^1.0",
+        "drupal/field_group": "^3",
         "drupal/gdpr": "^2.0@alpha",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/pathauto": "^1.4"
