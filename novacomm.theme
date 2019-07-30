@@ -48,7 +48,7 @@ function novacomm_preprocess_html(&$variables) {
  * Implements hook_preprocess() for fields.
  */
 function novacomm_preprocess_field (&$variables) {
-  if ( $variables['field_name'] == 'field_url' AND $variables['element']['#bundle'] == 'projects') {
+  if ( $variables['field_name'] == 'field_url' AND $variables['element']['#bundle'] == 'services') {
     $variables['items'][0]['content']['#title'] = t('Go to the website');
     $variables['items'][0]['content']['#attributes']['class'][] = 'link-btn';
   }

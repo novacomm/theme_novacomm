@@ -975,13 +975,14 @@ header .header-container .header-inner .mob-nav-btn {
     text-decoration: none;
     color: #000;
 }
-.internal-page #main #page-content .list-container .col .items .item-front img
-{
+.internal-page #main #page-content .list-container .col .items .item-front img {
   width: 32%;
   float: left;
   border-right: 3px solid #252525;
   margin: 7px 20px 30px 0;
+  height: auto;
 }
+
 .internal-page #main #page-content .list-container a.col:hover .items .item-front img
 {
   border-right: 3px solid #e51b24;
@@ -1029,6 +1030,10 @@ header .header-container .header-inner .mob-nav-btn {
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;
+}
+
+#project-container .field--type-image img {
+  margin: 0;
 }
 
 /*****************************Projects - Detail page************************/
