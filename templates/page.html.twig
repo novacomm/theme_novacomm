@@ -144,14 +144,14 @@
         <div id="main">
           {{ page.breadcrumb }}
         {% set page_class = 'page-content' %}
-        {% if content_type != 'projects' %}
+        {% if content_type != 'services' %}
             {% set content_type = node.gettype %}
             {% if node.nid.value == 25 %}
               {% set page_class = 'intro-project' %}
             {% endif %}
         {% endif %}
           <div id="{{ page_class }}">
-          {% if content_type != 'projects' %}
+          {% if content_type != 'services' %}
             {% set page_class = 'page-content' %}
             {% set content_type = node.gettype %}
             {% if node.nid.value == 25 %}
@@ -161,7 +161,7 @@
           {% endif %}
                 <a id="main-content" tabindex="-1"></a>
                   {{ page.content }}
-            {% if content_type != 'projects' %}
+            {% if content_type != 'services' %}
             </div>
           </div>
           {% endif %}
