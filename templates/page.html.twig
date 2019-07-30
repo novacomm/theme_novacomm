@@ -154,14 +154,12 @@
             {% if node.nid.value == 25 %}
               {% set page_class = 'intro-project' %}
             {% endif %}
-            <div class="content-inner clearfix">
           {% endif %}
+            <div class="content-inner clearfix">
                 <a id="main-content" tabindex="-1"></a>
                   {{ page.content }}
-            {% if content_type != 'services' %}
             </div>
           </div>
-          {% endif %}
         </div>
       {% endblock %}
     </div>
