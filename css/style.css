@@ -343,15 +343,14 @@ header .header-container .header-inner .mob-nav-btn {
 .block-views-blockbanner-banner .col-auto {   padding: 0;
 }
 
-#banner
-{
+#banner {
   width: 100%;
-  height:850px;
-    position: relative;
-    z-index: 100;
+  height: 425px;
+  position: relative;
+  z-index: 100;
 }
-.page-banner
-{
+
+.page-banner {
     background: url("../images/bkg-img-about.jpg") no-repeat scroll center top / cover;
     height: 100%;
     position: relative;
@@ -365,7 +364,7 @@ header .header-container .header-inner .mob-nav-btn {
   width: 600px;
   color: #fff;
   padding: 5px 10px;
-  top: 300px;
+  top: 150px;
   position: relative;
   z-index: 100;
 }
@@ -376,7 +375,7 @@ header .header-container .header-inner .mob-nav-btn {
 {
   color: #fff;
   font-weight: normal;
-  font-size: 3.333em;
+  font-size: 2.5em;
   padding: 0;
   margin: 0;
 

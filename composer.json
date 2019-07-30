@@ -18,6 +18,7 @@
         "drupal/field_group": "^3",
         "drupal/gdpr": "^2.0@alpha",
         "drupal/inline_entity_form": "^1.0@RC",
-        "drupal/pathauto": "^1.4"
+        "drupal/pathauto": "^1.4",
+        "drupal/paragraphs": "^1.8",
     }
 }
