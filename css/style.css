@@ -1038,6 +1038,10 @@ header .header-container .header-inner .mob-nav-btn {
 
 /*****************************Projects - Detail page************************/
 
+.node--type-services #block-novacomm-page-title {
+  display: none;
+}
+
 .internal-page #main #intro-project
 {
     background-color: #f4f2f2;
