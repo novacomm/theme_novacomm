@@ -32,6 +32,7 @@ a:focus
 {
   color: #000;
 }
+
 .link-btn
 {
   background-color: #e51b24;
@@ -124,6 +125,11 @@ ul li {
 
 #intro-project .content-inner .col {
   width: auto;
+}
+
+.field--name-field-related-projects .field__items{
+  display: flex;
+  flex-wrap: wrap;
 }
 
  /******************************Contact**************************/
@@ -1605,7 +1611,11 @@ footer #footer-inner #block-novacomm-footer li:last-child {
 
 }
 
-
+@media screen and (min-width: 801px) {
+  .field--name-field-related-projects .field__items > .field__item{
+    width: 33%
+  }
+}
 
 
 @media screen and (max-width: 800px)

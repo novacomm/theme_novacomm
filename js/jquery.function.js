@@ -6,10 +6,9 @@
 (function (jQuery, Drupal) {
   Drupal.behaviors.novacomm = {
     attach: function (context, settings) {
-
     }
-
   };
+
 Drupal.behaviors.novacomm.init_page = function() {
   jQuery('.nav-item a.contact').parent().addClass('contact');
   init_smoove();
