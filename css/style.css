@@ -106,8 +106,6 @@ h4
   margin: 20px 0 0px;
 }
 
-.node--type-page h1.title {display:none;}
-
 .border-bottom-white
 {
   border-bottom: 1px solid #fff;
@@ -1044,10 +1042,6 @@ header .header-container .header-inner .mob-nav-btn {
 
 /*****************************Projects - Detail page************************/
 
-.node--type-services #block-novacomm-page-title {
-  display: none;
-}
-
 .internal-page #main #intro-project
 {
     background-color: #f4f2f2;
@@ -1808,8 +1802,7 @@ footer #footer-inner #block-novacomm-footer li:last-child {
       height: 650px;
       width: 100%;
   }
-  .page-banner .box-info
-  {
+  .page-banner .box-info {
     width: auto;
   }
   .page-banner .box-info h1

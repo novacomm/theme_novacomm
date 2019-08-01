@@ -53,3 +53,4 @@ function novacomm_preprocess_field (&$variables) {
     $variables['items'][0]['content']['#attributes']['class'][] = 'link-btn';
   }
 }
+
