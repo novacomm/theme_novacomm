@@ -473,6 +473,11 @@ header .header-container .header-inner .mob-nav-btn {
   margin: 10px  0px 0px;
 }
 
+p.logo_hp a{
+  height: 73px;
+  display: block;
+}
+
 
 /*********************************About**************************/
 
