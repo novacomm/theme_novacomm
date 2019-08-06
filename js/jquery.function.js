@@ -9,7 +9,14 @@
     }
   };
 
-Drupal.behaviors.novacomm.init_page = function() {
+  Drupal.behaviors.novacomm.init_page = function() {
+
+  if (jQuery(window).width() < 801) {
+    jQuery(document).ready(function(){
+      jQuery('.field--name-field-related-projects .field__items').bxSlider();
+    });
+  }
+
   jQuery('.nav-item a.contact').parent().addClass('contact');
   init_smoove();
   //JOB FORM
@@ -88,7 +95,6 @@ Drupal.behaviors.novacomm.init_page = function() {
   })
 
 
-
   jQuery('.mob-nav-btn').unbind('click');
 
   if(document.body.clientWidth <= 960 && document.body.clientWidth > 800)
@@ -115,25 +121,25 @@ Drupal.behaviors.novacomm.init_page = function() {
     }
   }
 
-      jQuery('.nav-item a.contact').parent().addClass('contact');
+    jQuery('.nav-item a.contact').parent().addClass('contact');
 
-      //CONTACT
-      jQuery('.navbar-nav').on('click', 'a.contact', function(){
+    //CONTACT
+    jQuery('.navbar-nav').on('click', 'a.contact', function(){
 
-       if(!jQuery('#block-contact').hasClass('open')) {
-          jQuery(this).parent().addClass('open');
-          jQuery('#block-contact').stop().animate({'top': 0}, 1000, 'swing');
-          jQuery('#header').stop().animate({'top': 525}, 1000, 'swing');
-          }
-        else {
-          jQuery(this).parent().removeClass('open');
-          jQuery('#block-contact').stop().animate({'top': -525}, 1000, 'swing',function(){jQuery('#block-contact').removeClass('open')});
-          jQuery('#header').stop().animate({'top': 0}, 1000, 'swing');
-          }
+     if(!jQuery('#block-contact').hasClass('open')) {
+        jQuery(this).parent().addClass('open');
+        jQuery('#block-contact').stop().animate({'top': 0}, 1000, 'swing');
+        jQuery('#header').stop().animate({'top': 525}, 1000, 'swing');
+        }
+      else {
+        jQuery(this).parent().removeClass('open');
+        jQuery('#block-contact').stop().animate({'top': -525}, 1000, 'swing',function(){jQuery('#block-contact').removeClass('open')});
+        jQuery('#header').stop().animate({'top': 0}, 1000, 'swing');
+        }
 
-        jQuery('#block-contact').toggleClass('open');
-        return false;
-      })
+      jQuery('#block-contact').toggleClass('open');
+      return false;
+    })
 
     jQuery('#block-contact').on('click', '#btn-contact-close', function(){
       jQuery('.nav-item.contact').removeClass('open');

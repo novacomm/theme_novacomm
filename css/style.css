@@ -128,6 +128,7 @@ ul li {
 .field--name-field-related-projects .field__items{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
  /******************************Contact**************************/
@@ -1483,7 +1484,7 @@ footer #footer-inner #block-novacomm-footer li:last-child {
 
 @media screen and (min-width: 801px) {
   .field--name-field-related-projects .field__items > .field__item{
-    width: 33.33%
+    width: 31%
   }
 }
 

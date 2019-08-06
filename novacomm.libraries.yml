@@ -7,11 +7,13 @@ global-styling:
     js/libraries/jquery-ui.min.js: {}
     js/libraries/jquery.hoverdir.js: {}
     js/libraries/modernizr.custom.97074.js: {}
+    js/libraries/jquery.bxslider.js: {}
 
   css:
     component:
       css/style.css: {}
       css/custom_colors.css: {}
+      css/jquery.bxslider.css: {}
 bootstrap:
   js:
     /libraries/popper/popper.min.js: {}
