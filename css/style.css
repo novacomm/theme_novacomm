@@ -529,119 +529,8 @@ header .header-container .header-inner .mob-nav-btn {
   left: -9999px;
 }
 
-.internal-page #main .team-container
-{
-  width: 100%;
-}
-.internal-page #main .team-container ul
-{
-  margin: 30px 0 0;
-  padding: 0;
-  width: 100%;
-}
-.internal-page #main .team-container ul li
-{
-  list-style: none;
-  line-height:0.8em;
-  float: left;
-  padding: 0;
-  margin:0;
-  position: relative;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  width: 19.5%;
-  overflow: hidden;
-}
-.internal-page #main .team-container ul li a
-{
-  display: block;
-  margin:0;
-  padding: 0;
-}
-.internal-page #main .team-container ul li .pic-member img
-{
-  width: 100%;
-  height: auto;
-  filter: gray;
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -o-filter: grayscale(1);
-    -ms-filter: grayscale(1);
-}
-.internal-page #main .team-container ul li .pic-member .info-member
-{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 32px;
-  background-color: #222;
-  opacity: 0.7;
-  color: #fff;
-}
-.internal-page #main .team-container ul li .pic-member .info-member span
-{
-  display: block;
-  text-align: center;
-  padding: 10px 10px 0;
-  font-size: 0.8em;
-}
-.internal-page #main .team-container ul li .pic-member .info-member span.member-name
-{
-  text-transform: uppercase;
-}
-.internal-page #main .team-container ul li .pic-member img:hover
-{
-   /*
-    -webkit-filter: grayscale(1) brightness(50%);
-    -moz-filter: grayscale(1) brightness(50%);
-    -o-filter: grayscale(1) brightness(50%);
-    -ms-filter: grayscale(1) brightness(50%);
-  filter: gray;
-    filter: grayscale(1) brightness(50%);
-    */
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-/*.internal-page #main .team-container ul li .pic-member:hover .info-member
-{
-  display: block;
-  width: 100%;
-  min-height: 40%;
-  background-color: #e51b24;
-  color: #fff;
-  opacity: 0.9;
-  -webkit-animation: moveteam 1s alternate;
-    animation: moveteam 1s alternate;
-    overflow: hidden;
-}*/
-/* Chrome, Safari, Opera */
-@-webkit-keyframes moveteam {
-    from {bottom: -40%;}
-    to {bottom: 0px;}
-}
-
-@keyframes moveteam {
-    from {bottom:-40%;}
-    to {bottom: 0px;}
-}
-
-
 
 /**************************************************************/
-
-
 
 #main #page-content .content-inner,
 #main #intro-project .content-inner
@@ -1203,6 +1092,7 @@ header .header-container .header-inner .mob-nav-btn {
     box-sizing: border-box;
     float: left;
 }
+
 .internal-page #main #form-container .right-info input.text-field
 {
   height: 45px;
@@ -1212,6 +1102,7 @@ header .header-container .header-inner .mob-nav-btn {
   color: #333;
   padding-left: 10px;
 }
+
 .internal-page #main #form-container .right-info textarea
 {
   width: 440px;
