@@ -857,7 +857,7 @@ header .header-container .header-inner .mob-nav-btn {
   background: url(../images/sprite-subnav.html) no-repeat -30px -34px;
 }
 
-/********************************Projects - Grid view***************************/
+/********************************Services - Grid view***************************/
 
 .internal-page #main #page-content .grid-container
 {
@@ -959,7 +959,7 @@ header .header-container .header-inner .mob-nav-btn {
 }
 
 
-/********************************Projects - List view***************************/
+/********************************Servic es - List view***************************/
 
 .internal-page #main #page-content .grid-container
 {
@@ -1040,7 +1040,7 @@ header .header-container .header-inner .mob-nav-btn {
   margin: 0;
 }
 
-/*****************************Projects - Detail page************************/
+/*****************************Service - Detail page************************/
 
 .internal-page #main #intro-project
 {
@@ -1056,6 +1056,22 @@ header .header-container .header-inner .mob-nav-btn {
   padding: 0;
   margin: 0;
 }
+
+.internal-page #main #intro-project .field--name-field-tags h3 {
+  display: none;
+}
+
+.internal-page #main #intro-project .field--name-field-tags li {
+  list-style-image: none;
+  padding-right: 0;
+}
+
+.internal-page #main #intro-project .field--name-field-tags .links.field__items li:not(:first-child):before {
+  content: "/";
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+}
+
 .internal-page #main #detail-project
 {
     background-color: #fff;
