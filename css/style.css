@@ -82,23 +82,23 @@ h2 a
   color: #252525;
   text-decoration: none;
 }
-h2 a:hover
-{
+
+h2 a:hover {
   color: #e51b24;
   text-decoration: underline;
 }
-h3
-{
+
+h3 {
   font-size:2em ;
-   background: url(../images/grey-line.png) no-repeat scroll center top;
+  background: url(../images/grey-line.png) no-repeat scroll center top;
   color: #848484;
   font-weight: normal;
   text-align: center;
   margin: 20px 0 0px 0;
   padding-top: 18px;
 }
-h4
-{
+
+h4 {
   font-size:1.25em ;
   color: #fff;
   font-weight: lighter;
