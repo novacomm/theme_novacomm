@@ -1115,9 +1115,6 @@ header .header-container .header-inner .mob-nav-btn {
   padding-right: 70px;
 }
 
-
-
-
 .internal-page #main #detail-project .job-box
 {
   background-color: #f4f2f2;
@@ -1228,6 +1225,10 @@ header .header-container .header-inner .mob-nav-btn {
   margin-top: 0;
   width: 200px;
   padding:8px 0;
+}
+
+.related-projects h3 {
+  margin-bottom: 1em;
 }
 
 
@@ -1623,7 +1624,7 @@ footer #footer-inner #block-novacomm-footer li:last-child {
 
 @media screen and (min-width: 801px) {
   .field--name-field-related-projects .field__items > .field__item{
-    width: 33%
+    width: 33.33%
   }
 }
 
