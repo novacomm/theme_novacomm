@@ -11,7 +11,8 @@
 
   Drupal.behaviors.novacomm.init_page = function() {
 
-  if (jQuery(window).width() < 801) {
+  // Slider on related projects for small screens.
+  if (jQuery(window).width() < 481) {
     jQuery(document).ready(function(){
       jQuery('.field--name-field-related-projects .field__items').bxSlider();
     });
