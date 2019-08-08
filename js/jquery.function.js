@@ -20,30 +20,6 @@
 
   jQuery('.nav-item a.contact').parent().addClass('contact');
   init_smoove();
-  //JOB FORM
-  var options = {
-    dataType:  'json',
-    success:function(data) {
-      if(data.success){
-        // jQuery('#form_container').html(data.form_contact_message + '<br /><img src="/images/congrat.gif" />');
-        jQuery('#form_container').html(data.form_contact_message);
-      }
-      else{
-
-        for (var prop in data.form_contact_array) {
-
-          if(data.form_contact_array[prop]){
-
-            jQuery('#'+prop).css('border','1px solid red');
-          }
-          else {
-            jQuery('#'+prop).css('border','none');
-          }
-        }
-        // jQuery('#contact_error').html(data.form_contact_message);
-      }
-    }
-  };
 
   jQuery('.items ').each( function() { jQuery(this).hoverdir({
     speed : 450})});
