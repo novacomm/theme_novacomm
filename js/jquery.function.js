@@ -52,25 +52,6 @@
       return false;
 })
 
-  jQuery('.change_view').bind('click',function(){
-    if(!jQuery(this).hasClass('active')){
-      jQuery('.change_view').toggleClass('active');
-
-      if(jQuery('#project-container').hasClass('grid-container')){
-        jQuery('.items ').each( function() { jQuery(this).hoverdir(); });
-        jQuery('#project-container').removeClass('grid-container');
-        jQuery('#project-container').addClass('list-container');
-      }
-      else{
-        jQuery('.items ').each( function() { jQuery(this).hoverdir(); });
-        jQuery('#project-container').removeClass('list-container');
-        jQuery('#project-container').addClass('grid-container');
-      }
-      init_grid();
-    }
-    return false;
-  })
-
 
   jQuery('.mob-nav-btn').unbind('click');
 
