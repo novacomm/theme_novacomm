@@ -106,8 +106,6 @@
       return false;
     })
 
-
-
     jQuery('a.smoove-lk').on('click',function(e){
       e.preventDefault();
 
@@ -126,24 +124,6 @@
       return false;
     });
 
-    jQuery('.change_view').on('click',function(){
-      if(!jQuery(this).hasClass('active')){
-        jQuery('.change_view').toggleClass('active');
-
-        if(jQuery('#project-container').hasClass('grid-container')){
-          jQuery('.items ').each( function() { jQuery(this).hoverdir().destroy(); });
-          jQuery('#project-container').removeClass('grid-container');
-          jQuery('#project-container').addClass('list-container');
-        }
-        else{
-          jQuery('.items ').each( function() { jQuery(this).hoverdir(); });
-          jQuery('#project-container').removeClass('list-container');
-          jQuery('#project-container').addClass('grid-container');
-        }
-      }
-      Drupal.behaviors.novacomm.init_grid();
-      return false;
-    })
 //GRID
 
   Drupal.behaviors.novacomm.init_grid = function(){
