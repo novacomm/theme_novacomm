@@ -5,7 +5,6 @@ global-styling:
     js/jquery.init.js: {}
     js/libraries/jquery.form.js: {}
     js/libraries/jquery-ui.min.js: {}
-    js/libraries/jquery.hoverdir.js: {}
     js/libraries/modernizr.custom.97074.js: {}
     js/libraries/jquery.bxslider.js: {}
 
