@@ -21,12 +21,6 @@
   jQuery('.nav-item a.contact').parent().addClass('contact');
   init_smoove();
 
-  jQuery('.items ').each( function() { jQuery(this).hoverdir({
-    speed : 450})});
-
-  jQuery('#application_form').ajaxForm(options);
-
-
   //CONTACT
       jQuery('.nav-item').on('click', 'a.contact', function(){
 
