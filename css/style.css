@@ -1246,6 +1246,9 @@ footer #footer-inner .linkedin
   padding: 40px 0 0 74px;
 }
 
+#block-contactfooter .icons a, #block-follow .icons a {
+  padding-bottom: 3px;
+}
 footer #footer-inner .linkedin:hover,
 footer #footer-inner .linkedin:focus
 {
