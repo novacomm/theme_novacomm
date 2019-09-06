@@ -145,15 +145,11 @@
           {{ page.breadcrumb }}
         {% set content_type = node.gettype %}
         {% set page_class = 'page-content' %}
-        {% if content_type == 'services' %}
+        {% if content_type == 'services' or node.nid.value == 25 %}
           {% set page_class = 'intro-project' %}
         {% endif %}
           <div id="{{ page_class }}">
           {% if content_type != 'services' %}
-            {% set page_class = 'page-content' %}
-            {% if node.nid.value == 25 %}
-              {% set page_class = 'intro-project' %}
-            {% endif %}
             <div class="content-inner clearfix">
           {% endif %}
                 <a id="main-content" tabindex="-1"></a>

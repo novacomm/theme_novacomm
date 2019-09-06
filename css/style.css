@@ -299,14 +299,14 @@ header .header-container .header-inner nav .hor-nav li {
   text-transform: uppercase;
 }
 
-header .header-container .header-inner nav .hor-nav li.contact:after{
-                                                                       content: '';
- background: url("../images/arrow-contact.png") no-repeat scroll right ;
- right ;
+header .header-container .header-inner nav .hor-nav li.contact:after {
+  content: '';
+  background: url("../images/arrow-contact.png") no-repeat scroll right ;
+  right ;
   padding-right: 15px;
 }
 
-header .header-container .header-inner nav .hor-nav li.contact.open:after{
+header .header-container .header-inner nav .hor-nav li.contact.open:after {
   background: url("../images/arrow-contact-open.html") no-repeat scroll right;
   padding-right: 15px;
 }
