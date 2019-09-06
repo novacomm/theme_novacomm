@@ -19,7 +19,10 @@
   }
 
   jQuery('.nav-item a.contact').parent().addClass('contact');
+
   init_smoove();
+
+  jQuery('.items ').each( function() { jQuery(this).hoverdir({speed : 450})});
 
   //CONTACT
       jQuery('.nav-item').on('click', 'a.contact', function(){
