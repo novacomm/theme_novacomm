@@ -299,8 +299,10 @@ header .header-container .header-inner nav .hor-nav li {
   text-transform: uppercase;
 }
 
-header .header-container .header-inner nav .hor-nav li.contact {
-  background: url("../images/arrow-contact.png") no-repeat scroll right;
+header .header-container .header-inner nav .hor-nav li.contact:after{
+                                                                       content: '';
+ background: url("../images/arrow-contact.png") no-repeat scroll right ;
+ right ;
   padding-right: 15px;
 }
 
@@ -317,8 +319,8 @@ header .header-container .header-inner nav .hor-nav li.home
 {
   margin: 0;
 }
-header .header-container .header-inner nav .hor-nav li a
-{
+header .header-container .header-inner nav .hor-nav li a.nav-link {
+  display: inline-block;
   text-decoration: none;
   color: #000;
   font-weight: 500;
