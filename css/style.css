@@ -853,7 +853,7 @@ p.logo_hp a{
 }
 
 .internal-page #main #intro-project .field--name-field-tags .links.field__items li:not(:first-child):before {
-  content: "/";
+  content: "|";
   margin-right: 0.2em;
   margin-left: 0.2em;
 }
