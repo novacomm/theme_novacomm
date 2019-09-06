@@ -306,7 +306,7 @@ header .header-container .header-inner nav .hor-nav li.contact:after{
   padding-right: 15px;
 }
 
-header .header-container .header-inner nav .hor-nav li.contact.open{
+header .header-container .header-inner nav .hor-nav li.contact.open:after{
   background: url("../images/arrow-contact-open.html") no-repeat scroll right;
   padding-right: 15px;
 }
