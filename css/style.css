@@ -547,7 +547,7 @@ p.logo_hp a{
   margin: 0 auto;
   position: relative;
 }
-#main #intro-project .content-inner {
+#main #intro-project .content-inner, .path-services .content-inner {
   padding: 50px 20px 20px 20px;
 }
 
@@ -838,9 +838,7 @@ p.logo_hp a{
     top: -2px;
     z-index: 10;
 }
-.internal-page #main #intro-project h1
-{
-  text-align: left;
+.internal-page #main #intro-project h1 {
   padding: 0;
   margin: 0;
 }
