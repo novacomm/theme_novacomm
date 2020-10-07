@@ -1644,7 +1644,7 @@ footer #footer-inner #block-novacomm-footer li:last-child {
       margin: 0;
       padding: 0;
       width: 100%;
-      position: absolute;
+      position: relative;
       top: 88px;
   }
   header .header-container .header-inner nav .hor-nav li
